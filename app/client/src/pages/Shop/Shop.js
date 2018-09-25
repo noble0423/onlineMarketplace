@@ -15,13 +15,6 @@ class Shop extends Component {
                         <Card />
                         <Card />
                         <Card />
-                    </Col>
-                    <Col size="sm-12">
-                        <Card />
-                        <Card />
-                        <Card />
-                    </Col>
-                    <Col size="sm-12">
                         <Card />
                         <Card />
                         <Card />
