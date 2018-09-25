@@ -3,7 +3,7 @@ import "./Footer.css";
 
 const Footer = () => (
   <footer className="footer">
-    <span>myArt.com 2018</span>
+    <span>Art-ster 2018</span>
   </footer>
 );
 

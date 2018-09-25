@@ -6,7 +6,7 @@ import "./Navbar.css";
 const Navbar = props => (
   <nav className="navbar navbar-expand-lg navbar-light bg-light">
     <Link className="navbar-brand" to="/">
-      myArt.com
+    Art-ster
     </Link>
     <div>
       <ul className="navbar-nav">
@@ -22,18 +22,18 @@ const Navbar = props => (
             About
           </Link>
         </li>
-        {/* <li
+        <li
           className={
-            window.location.pathname === "/discover"
+            window.location.pathname === "/shop"
               ? "nav-item active"
               : "nav-item"
           }
         >
-          <Link to="/discover" className="nav-link">
-            Discover
+          <Link to="/shop" className="nav-link">
+            Shop
           </Link>
         </li>
-        <li
+        {/* <li
           className={
             window.location.pathname === "/search"
               ? "nav-item active"

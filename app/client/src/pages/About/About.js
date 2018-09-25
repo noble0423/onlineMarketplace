@@ -6,14 +6,14 @@ import Col from "../../components/Grid/Col/Col";
 
 const About = () => (
   <div>
-    <Hero backgroundImage="http://blog.art.com/artwiki/wp-content/uploads/2014/05/pablo-picasso-mediterranean-landscape-cubism-artwork.jpg">
-      <h1>myArt.com</h1>
-      <h2>Online Marketplace for Artists</h2>
+    <Hero backgroundImage="https://static1.squarespace.com/static/5426e690e4b05b9e44ab7aaf/t/5ad38816f950b77bff6fa366/1523812430057/JessRankinPhotographer-SarahArrowArtStudio-24.jpg?format=2500w">
+      {/* <h1>Art-ster</h1>
+      <h2>Online Marketplace for Artists</h2> */}
     </Hero>
     <Container style={{ marginTop: 30 }}>
       <Row>
         <Col size="md-12">
-          <h1>Welcome To myArt.com!</h1>
+          <h1>Welcome To Art-ster!</h1>
         </Col>
       </Row>
       <Row>
