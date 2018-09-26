@@ -21,7 +21,7 @@ const inventorySchema = new Schema({
     },
     description: {
         type: String,
-        trim: true,
+        trim: true
     },
     updated: {
         type: Date,
@@ -31,4 +31,4 @@ const inventorySchema = new Schema({
 
 const Inventory = mongoose.model("Inventory", inventorySchema);
 
-module.export = Inventory;
+module.exports = Inventory;
