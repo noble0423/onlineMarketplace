@@ -24,7 +24,7 @@ const Card = props => (
   <div className="card">
   <div className="img-container">
     {/* <img alt={props.name} src={props.image} /> */}
-    <img className="work-image" alt="place holder" src="https://cdn.shopify.com/s/files/1/1245/7671/products/Cosmic-Blizzard-Fluid-Painting-Splatter-Abstract-Art-Modern-Original_1024x1024.jpg?v=1471209003" />
+    <img className="work-image" alt="place holder" src="https://www.thebroad.org/sites/default/files/art/stella-shards_iv.jpg" />
   </div>
   <div className="content">
     <ul>
