@@ -1,9 +1,10 @@
 import React, { Component } from "react";
 // import { Link } from "react-router-dom";
 import Container from "../../components/Grid/Container/Container";
+import Wrapper from "../../components/Wrapper";
 import Row from "../../components/Grid/Row/Row";
 import Col from "../../components/Grid/Col/Col";
-// import Card from "../../components/Card";
+import Card from "../../components/Card";
 import { List, ListItem } from "../../components/List";
 import API from "../../utils/API";
 
@@ -24,7 +25,6 @@ class Shop extends Component {
 
     // Loads entire inventory of works
     loadWorks = () => {
-        console.log("loadWorks() is being hit");
         API.getInventory()
             .then(res =>
                 this.setState({
@@ -37,7 +37,7 @@ class Shop extends Component {
                     description: ""
                 })
             )
-            .catch(err => console.log("getInventory error: " + err));
+            .catch(err => console.log(err));
     };
 
     render() {
@@ -46,13 +46,20 @@ class Shop extends Component {
                 <Row>
                     <Col size="sm-12">
                     {this.state.works.length ? (
-                        <List>
+                        // <List>
+                        <Wrapper>
                             {this.state.works.map(work => (
-                                <ListItem key={work._id}>
-                                    Title: {work.title}
-                                </ListItem>
-                            ))}
-                        </List>
+                                <Card 
+                                    key={work._id}
+                                    title={work.title}
+                                    image={work.image}
+                                    width={work.width}
+                                    height={work.height}
+                                    quantity={work.quantity}
+                                />
+                        ))}
+                        </Wrapper>
+                        // </List>
                     ) : (
                         <h3>No Results to Display</h3>
                     )}    

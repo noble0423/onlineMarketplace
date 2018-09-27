@@ -24,18 +24,18 @@ const Card = props => (
   <div className="card">
   <div className="img-container">
     {/* <img alt={props.name} src={props.image} /> */}
-    <img className="work-image" alt="place holder" src="https://www.thebroad.org/sites/default/files/art/stella-shards_iv.jpg" />
+    <img className="work-image" alt="place holder" src={props.image} />
   </div>
   <div className="content">
     <ul>
       <li>
-        <strong>Title:</strong> {/* {props.name} */}
+        <strong>Title:</strong> {props.title}
       </li>
       <li>
-        <strong>Size:</strong> {/* {props.occupation} */}
+        <strong>Size:</strong> {props.width} x {props.height}
       </li>
       <li>
-        <strong>Qty:</strong> {/* {props.location} */}
+        <strong>Qty:</strong> {props.quantity}
       </li>
     </ul>
   </div>
