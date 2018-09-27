@@ -33,17 +33,28 @@ const Navbar = props => (
             Shop
           </Link>
         </li>
-        {/* <li
+        <li
           className={
-            window.location.pathname === "/search"
+            window.location.pathname === "/details"
               ? "nav-item active"
               : "nav-item"
           }
         >
-          <Link to="/search" className="nav-link">
-            Search
+          <Link to="/details" className="nav-link">
+            Details
           </Link>
-        </li> */}
+        </li>
+        <li
+          className={
+            window.location.pathname === "/admin"
+              ? "nav-item active"
+              : "nav-item"
+          }
+        >
+          <Link to="/admin" className="nav-link">
+            Admin
+          </Link>
+        </li>
       </ul>
     </div>
   </nav>
