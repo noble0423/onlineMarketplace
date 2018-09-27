@@ -1,5 +1,6 @@
 import React from "react";
 // import CardBtn from "../CardBtn";
+import Test from "../../components/Test";
 import "./Card.css";
 
 const Card = props => (
@@ -36,6 +37,9 @@ const Card = props => (
       </li>
       <li>
         <strong>Qty:</strong> {props.quantity}
+      </li>
+      <li>
+        <Test testComponent={props.test} />
       </li>
     </ul>
   </div>

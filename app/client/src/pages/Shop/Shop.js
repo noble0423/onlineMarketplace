@@ -5,7 +5,7 @@ import Wrapper from "../../components/Wrapper";
 import Row from "../../components/Grid/Row/Row";
 import Col from "../../components/Grid/Col/Col";
 import Card from "../../components/Card";
-import { List, ListItem } from "../../components/List";
+// import { List, ListItem } from "../../components/List";
 import API from "../../utils/API";
 
 class Shop extends Component {
@@ -16,7 +16,8 @@ class Shop extends Component {
         width: "",
         height: "",
         quantity: "",
-        description: "" 
+        description: "",
+        test: "AAAA" 
     };
 
     componentDidMount() {
@@ -56,6 +57,7 @@ class Shop extends Component {
                                     width={work.width}
                                     height={work.height}
                                     quantity={work.quantity}
+                                    test={this.state.test}
                                 />
                         ))}
                         </Wrapper>
