@@ -6,7 +6,7 @@ import Col from "../../components/Grid/Col/Col";
 
 const About = () => (
   <div>
-    <Hero backgroundImage="https://static1.squarespace.com/static/5426e690e4b05b9e44ab7aaf/t/5ad38816f950b77bff6fa366/1523812430057/JessRankinPhotographer-SarahArrowArtStudio-24.jpg?format=2500w">
+    <Hero     backgroundImage="https://static1.squarespace.com/static/5426e690e4b05b9e44ab7aaf/t/5ad38816f950b77bff6fa366/1523812430057/JessRankinPhotographer-SarahArrowArtStudio-24.jpg?format=2500w">
       {/* <h1>Art-ster</h1>
       <h2>Online Marketplace for Artists</h2> */}
     </Hero>
