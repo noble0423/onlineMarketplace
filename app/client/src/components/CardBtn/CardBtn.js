@@ -6,6 +6,7 @@ const CardBtn = props => (
     onClick={props.onClick}
     className={`card-btn ${props["data-value"]}`}
     {...props}
+    item={props.item}
   />
 );
 

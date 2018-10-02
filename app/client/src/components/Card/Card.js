@@ -1,5 +1,5 @@
 import React from "react";
-// import CardBtn from "../CardBtn";
+import CardBtn from "../CardBtn";
 // import Test from "../../components/Test";
 import "./Card.css";
 
@@ -43,6 +43,11 @@ const Card = props => (
       </li> */}
     </ul>
   </div>
+  <CardBtn
+    data-value="cart"
+    onClick={props.onClick}
+    item={props.item}
+  />
   {/* <span onClick={() => props.removeFriend(props.id)} className="remove">
     𝘅
   </span> */}

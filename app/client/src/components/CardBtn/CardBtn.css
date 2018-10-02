@@ -12,25 +12,25 @@
   outline: none;
 }
 
-.pass {
+/* .pass {
   left: 1%;
   background: #E53935;
-}
+} */
 
-.pass::after {
+/* .pass::after {
   content: "\f165";
-}
+} */
 
-.pick {
+.cart {
   right: 1%;
   background: #43A047;
 }
 
-.pick::after {
-  content: "\f164";
+.cart::after {
+  content: "\f217";
 }
 
-.pick:hover::after, .pass:hover::after {
+.cart:hover::after {
   animation: iconBounce .57s 1;
 }
 

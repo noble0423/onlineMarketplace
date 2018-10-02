@@ -17,12 +17,13 @@ class Shop extends Component {
         height: "",
         quantity: "",
         description: "",
-        test: "AAAA" 
+        // test: "AAAA" 
+
     };
 
     componentDidMount() {
         this.loadWorks();
-    }
+    };
 
     // Loads entire inventory of works
     loadWorks = () => {
@@ -41,6 +42,12 @@ class Shop extends Component {
             .catch(err => console.log(err));
     };
 
+    handleBtnClick = event => {
+        // console.log(event.target);
+        const detailId = event.target.getAttribute("item");
+        console.log("you clicked id " + detailId);
+    };
+
     render() {
         return (
             <Container style={{ marginTop: 30 }}>
@@ -51,12 +58,14 @@ class Shop extends Component {
                             {this.state.works.map(work => (
                                 <Card 
                                     key={work._id}
+                                    item={work._id}
                                     title={work.title}
                                     image={work.image}
                                     width={work.width}
                                     height={work.height}
                                     quantity={work.quantity}
                                     // test={this.state.test}
+                                    onClick={this.handleBtnClick}
                                 />
                         ))}
                         </Wrapper>
