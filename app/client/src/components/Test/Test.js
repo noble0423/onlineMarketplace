@@ -1,7 +1,9 @@
 import React from "react";
 
 const Test = props => (
-    <span>Test : {props.testComponent}</span>
+    <div className="test-div">
+        <span>Test component loading: {props.testComponent}</span>
+    </div>
 );
 
 export default Test;

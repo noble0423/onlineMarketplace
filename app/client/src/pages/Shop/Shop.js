@@ -1,10 +1,12 @@
 import React, { Component } from "react";
 // import { Link } from "react-router-dom";
+import Hero from "../../components/Hero";
 import Container from "../../components/Grid/Container/Container";
 import Wrapper from "../../components/Wrapper";
 import Row from "../../components/Grid/Row/Row";
 import Col from "../../components/Grid/Col/Col";
 import Card from "../../components/Card";
+import Test from "../../components/Test";
 // import { List, ListItem } from "../../components/List";
 import API from "../../utils/API";
 
@@ -17,8 +19,8 @@ class Shop extends Component {
         height: "",
         quantity: "",
         description: "",
-        // test: "AAAA" 
-
+        test: "AAAA", 
+        clicked: false
     };
 
     componentDidMount() {
@@ -36,7 +38,7 @@ class Shop extends Component {
                     width: "",
                     height: "",
                     quantity: "",
-                    description: ""
+                    description: "",
                 })
             )
             .catch(err => console.log(err));
@@ -46,35 +48,55 @@ class Shop extends Component {
         // console.log(event.target);
         const detailId = event.target.getAttribute("item");
         console.log("you clicked id " + detailId);
+        this.setState(prevState => ({
+            clicked: !prevState.clicked
+        }));
+        console.log("clicked state set to " + this.state.clicked);
     };
 
     render() {
         return (
-            <Container style={{ marginTop: 30 }}>
+            <div>
+                <Hero 
+                    backgroundImage="https://res.cloudinary.com/hzwebux5t/image/upload/c_fill,g_center,h_425,w_700/v1501582184/yllex7uzxvtxhi49zl6t.jpg">
+                </Hero>
+                <Container style={{ marginTop: 30 }}>
                 <Row>
                     <Col size="sm-12">
-                    {this.state.works.length ? (
-                        <Wrapper>
-                            {this.state.works.map(work => (
-                                <Card 
-                                    key={work._id}
-                                    item={work._id}
-                                    title={work.title}
-                                    image={work.image}
-                                    width={work.width}
-                                    height={work.height}
-                                    quantity={work.quantity}
-                                    // test={this.state.test}
-                                    onClick={this.handleBtnClick}
-                                />
-                        ))}
-                        </Wrapper>
+                    {/* {this.state.clicked ? (
+                        <Test testComponent={this.state.test} />
                     ) : (
-                        <h3>No Results to Display</h3>
-                    )}    
+                        <h1>ternary for test component not working</h1>
+                        <Col size="sm-12">
+                        <div> */}
+                            {this.state.works.length ? (
+                            <Wrapper>
+                                {this.state.works.map(work => (
+                                    <Card 
+                                        key={work._id}
+                                        item={work._id}
+                                        title={work.title}
+                                        image={work.image}
+                                        width={work.width}
+                                        height={work.height}
+                                        quantity={work.quantity}
+                                        test={this.state.test}
+                                        onClick={this.handleBtnClick}
+                                    />
+                                ))}
+                            </Wrapper>
+                            ) : (
+                                <h3>No Results to Display</h3>
+                            )}
+                        {/* </div>
+    
+                    </Col>   
+                    )} */}
                     </Col>
+                    
                 </Row>
             </Container>
+            </div>
         );   
     }
 }
