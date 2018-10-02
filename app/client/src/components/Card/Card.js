@@ -1,6 +1,6 @@
 import React from "react";
 // import CardBtn from "../CardBtn";
-import Test from "../../components/Test";
+// import Test from "../../components/Test";
 import "./Card.css";
 
 const Card = props => (
@@ -38,9 +38,9 @@ const Card = props => (
       <li>
         <strong>Qty:</strong> {props.quantity}
       </li>
-      <li>
+      {/* <li>
         <Test testComponent={props.test} />
-      </li>
+      </li> */}
     </ul>
   </div>
   {/* <span onClick={() => props.removeFriend(props.id)} className="remove">

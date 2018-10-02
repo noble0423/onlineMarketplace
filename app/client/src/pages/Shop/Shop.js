@@ -47,7 +47,6 @@ class Shop extends Component {
                 <Row>
                     <Col size="sm-12">
                     {this.state.works.length ? (
-                        // <List>
                         <Wrapper>
                             {this.state.works.map(work => (
                                 <Card 
@@ -57,24 +56,17 @@ class Shop extends Component {
                                     width={work.width}
                                     height={work.height}
                                     quantity={work.quantity}
-                                    test={this.state.test}
+                                    // test={this.state.test}
                                 />
                         ))}
                         </Wrapper>
-                        // </List>
                     ) : (
                         <h3>No Results to Display</h3>
                     )}    
-                        {/* <Card />
-                        <Card />
-                        <Card />
-                        <Card />
-                        <Card />
-                        <Card /> */}
                     </Col>
                 </Row>
             </Container>
-        );
+        );   
     }
 }
 
