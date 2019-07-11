@@ -63,37 +63,35 @@ class Shop extends Component {
                 <Container style={{ marginTop: 30 }}>
                 <Row>
                     <Col size="sm-12">
-                    {/* {this.state.clicked ? (
+                    {this.state.clicked ? (
                         <Test testComponent={this.state.test} />
                     ) : (
-                        <h1>ternary for test component not working</h1>
+                        <h1>ternary testing test component not working</h1>
                         <Col size="sm-12">
-                        <div> */}
-                            {this.state.works.length ? (
-                            <Wrapper>
-                                {this.state.works.map(work => (
-                                    <Card 
-                                        key={work._id}
-                                        item={work._id}
-                                        title={work.title}
-                                        image={work.image}
-                                        width={work.width}
-                                        height={work.height}
-                                        quantity={work.quantity}
-                                        test={this.state.test}
-                                        onClick={this.handleBtnClick}
-                                    />
-                                ))}
-                            </Wrapper>
-                            ) : (
-                                <h3>No Results to Display</h3>
-                            )}
-                        {/* </div>
-    
-                    </Col>   
-                    )} */}
+                            <div>
+                                {this.state.works.length ? (
+                                <Wrapper>
+                                    {this.state.works.map(work => (
+                                        <Card 
+                                            key={work._id}
+                                            item={work._id}
+                                            title={work.title}
+                                            image={work.image}
+                                            width={work.width}
+                                            height={work.height}
+                                            quantity={work.quantity}
+                                            test={this.state.test}
+                                            onClick={this.handleBtnClick}
+                                        />
+                                    ))}
+                                </Wrapper>
+                                ) : (
+                                    <h3>No Results to Display</h3>
+                                )}
+                            </div>
+                        </Col>   
+                    )}
                     </Col>
-                    
                 </Row>
             </Container>
             </div>
